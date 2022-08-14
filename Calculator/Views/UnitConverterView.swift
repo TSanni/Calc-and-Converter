@@ -211,7 +211,7 @@ struct UnitConverterView: View {
                 ForEach(buttons, id: \.self) { row in
                     HStack {
                         ForEach(row, id: \.self) { button in
-                            ExtractedView2(button: button)
+                            ButtonView(button: button)
 
                         }
                     }
@@ -237,7 +237,7 @@ struct UnitConverterView: View {
         }
     }
 
-struct ExtractedView2: View {
+struct ButtonView: View {
     @EnvironmentObject var units: Units
     let button: Buttons
     
