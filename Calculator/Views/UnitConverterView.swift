@@ -211,14 +211,7 @@ struct UnitConverterView: View {
                 ForEach(buttons, id: \.self) { row in
                     HStack {
                         ForEach(row, id: \.self) { button in
-                            Button {
-                                units.handleButtonInput(button: button)
-                            } label: {
-                                Text(button.rawValue)
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 40))
-                                    .frame(width: (screenwidth - (3*12)) / 3, height: (screenwidth - (3*12)) / 3)
-                            }
+                            ExtractedView2(button: button)
 
                         }
                     }
@@ -229,6 +222,7 @@ struct UnitConverterView: View {
             .padding()
         }
         .preferredColorScheme(.dark)
+        .environmentObject(units)
         
     }
     
@@ -242,3 +236,34 @@ struct UnitConverterView: View {
                 .previewDevice("iPod touch (7th generation)")
         }
     }
+
+struct ExtractedView2: View {
+    @EnvironmentObject var units: Units
+    let button: Buttons
+    
+    let screenwidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+    
+    
+    var body: some View {
+        Button {
+            units.handleButtonInput(button: button)
+        } label: {
+            if button.rawValue == "<-" {
+                Image(systemName: "delete.backward.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(20)
+                    .frame(width: (screenwidth - (3*12)) / 3, height: (screenwidth - (3*12)) / 3)
+
+            } else {
+                Text(button.rawValue)
+                    .foregroundColor(.white)
+                    .font(.system(size: 40))
+                    .frame(width: (screenwidth - (3*12)) / 3, height: (screenwidth - (3*12)) / 3)
+            }
+            
+
+        }
+    }
+}
