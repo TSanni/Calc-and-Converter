@@ -25,7 +25,7 @@ you'll notice that the UI is very similar.
 
 [![Screen-Shot-2022-08-14-at-12-20-26-PM.png](https://i.postimg.cc/NfMQYVZ7/Screen-Shot-2022-08-14-at-12-20-26-PM.png)](https://postimg.cc/t7LKNrqY) 
 
-[![Screen-Shot-2022-08-14-at-12-22-36-PM.png](https://i.postimg.cc/MTFdBnKG/Screen-Shot-2022-08-14-at-12-22-36-PM.png)](https://postimg.cc/CBbGTL8y)
+[![Screen-Shot-2022-08-14-at-1-50-38-PM.png](https://i.postimg.cc/wBFbvzfT/Screen-Shot-2022-08-14-at-1-50-38-PM.png)](https://postimg.cc/PLpM3gnB)
 ## What Needs to Be done
 
 The project is far from completion. Here is a list of features and improvements 
